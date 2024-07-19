@@ -4,21 +4,27 @@ import { FaCheck } from "react-icons/fa";
 import { FaRegEdit } from "react-icons/fa";
 import { GrUndo } from "react-icons/gr";
 
+// Moved outside the App function
+const storedTasks = () => {
+  let task = localStorage.getItem("tasks");
+
+  if (task) {
+    return JSON.parse(task);
+  } else {
+    return [];
+  }
+};
+
 function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(storedTasks());
   const [showCompleted, setShowCompleted] = useState(false);
   const [date, setDate] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
 
   useEffect(() => {
-    const storedTasks = localStorage.getItem("tasks");
-    if (storedTasks) {
-      setTasks(JSON.parse(storedTasks));
-    }
-
     const currentDate = new Date();
     const formattedDate = currentDate.toLocaleDateString("en-US", {
       weekday: "long",
@@ -72,6 +78,10 @@ function App() {
 
   return (
     <div className="bg-stone-950 text-white max-h-auto h-auto flex flex-col items-center p-5 md:p-10">
+      <div className="flex flex-row">
+        <h1 className="font-bold text-2xl">Todo</h1>
+        <h1 className="text-orange-500 font-bold text-2xl">App</h1>
+      </div>
       <div className="h-40 flex flex-row items-center border-gray-500 border-2 bg-stone-950 rounded-md p-5 mt-3 max-w-sm w-full justify-between">
         <div className="flex flex-col items-center ml-5">
           <h6 className="text-orange-500 font-bold text-2xl">{date}</h6>
