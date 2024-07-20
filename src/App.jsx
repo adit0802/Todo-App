@@ -78,7 +78,7 @@ function App() {
 
   return (
     <div className="bg-stone-950 text-white max-h-auto h-auto flex flex-col items-center p-5 md:p-10">
-      <div className="flex flex-row">
+      <div className="flex flex-row mt-10">
         <h1 className="font-bold text-2xl">Todo</h1>
         <h1 className="text-orange-500 font-bold text-2xl">App</h1>
       </div>
@@ -88,7 +88,7 @@ function App() {
           <h1 className="text-white font-bold text-md">Todos Done</h1>
         </div>
         <div className="bg-orange-500 rounded-full p-5 mr-4">
-          <h1 className="text-black font-bold text-xl">
+          <h1 className="text-black font-bold text-xl bg-orange-500">
             {completedTasksCount}/{tasks.length}
           </h1>
         </div>
