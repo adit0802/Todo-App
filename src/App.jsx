@@ -151,30 +151,36 @@ function App() {
                 key={index}
                 className="bg-[#2c2c2c] p-4 rounded-lg mb-4 flex justify-between items-center"
               >
-                <div className="flex items-center">
+                <div className="flex items-center bg-[#2c2c2c] overflow-hidden">
                   <div>
-                    <h1 className="text-xl font-bold">{task.title}</h1>
-                    <p>{task.description}</p>
+                    <h1 className="text-xl font-bold bg-[#2c2c2c] ">
+                      {task.title}
+                    </h1>
+                    <p className="bg-[#2c2c2c]">{task.description}</p>
                   </div>
                 </div>
-                <div className="flex space-x-2">
+                <div className="flex space-x-2 bg-[#2c2c2c]">
                   <button
                     onClick={() => toggleTaskCompletion(index)}
-                    className=" text-green font-bold text-xl py-1 px-1"
+                    className=" text-green font-bold text-xl py-1 px-1 bg-[#2c2c2c]"
                   >
-                    {task.completed ? <GrUndo /> : <FaCheck />}
+                    {task.completed ? (
+                      <GrUndo className="bg-[#2c2c2c]" />
+                    ) : (
+                      <FaCheck className="bg-[#2c2c2c]" />
+                    )}
                   </button>
                   <button
                     onClick={() => editTask(index)}
-                    className="text-white font-bold text-xl py-1 px-1"
+                    className="text-white font-bold text-xl py-1 px-1 bg-[#2c2c2c]"
                   >
-                    <FaRegEdit />
+                    <FaRegEdit className="bg-[#2c2c2c]" />
                   </button>
                   <button
                     onClick={() => deleteTask(index)}
-                    className=" text-white font-bold text-xl py-1 px-1"
+                    className=" text-white font-bold text-xl py-1 px-1 bg-[#2c2c2c]"
                   >
-                    <MdDeleteOutline />
+                    <MdDeleteOutline className="bg-[#2c2c2c]" />
                   </button>
                 </div>
               </div>
