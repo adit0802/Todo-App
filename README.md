@@ -4,22 +4,22 @@ This project is a responsive Todo application built with React and styled using 
 
 ## Features
 
-#### Add Todo: Allows users to create and add new tasks to their list.
-#### View Todos: Displays all tasks in a list view for easy access and management.
-#### Update Todo: Enables modification of existing tasks to keep them up-to-date.
-#### Delete Todo: Provides the ability to remove tasks that are no longer needed.
-#### Mark as Completed: Offers an option to mark tasks as finished.
-#### Completed Count: Shows how many tasks are completed for the day.
-#### State Management: Utilizes React's hooks (useState, useEffect) to manage application state efficiently.
-#### Data Integration: Saves task data in the browser’s local storage to ensure persistence across sessions.
-#### Styling: Designed with Tailwind CSS for a responsive and intuitive user interface.
+- Add Todo: Allows users to create and add new tasks to their list.
+- View Todos: Displays all tasks in a list view for easy access and management.
+- Update Todo: Enables modification of existing tasks to keep them up-to-date.
+- Delete Todo: Provides the ability to remove tasks that are no longer needed.
+- Mark as Completed: Offers an option to mark tasks as finished.
+- Completed Count: Shows how many tasks are completed for the day.
+- State Management: Utilizes React's hooks (useState, useEffect) to manage application state efficiently.
+- Data Integration: Saves task data in the browser’s local storage to ensure persistence across sessions.
+- Styling: Designed with Tailwind CSS for a responsive and intuitive user interface.
 
 ## Technologies Used
 
-#### React.js
-#### JavaScript
-#### Tailwind CSS
-#### HTML
+- React.js
+- JavaScript
+- Tailwind CSS
+- HTML
 
 ## Installation
 
